@@ -5,20 +5,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    // justifyContent: 'center',
+    alignItems: 'center'
   },
   main: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    // justifyContent: 'center',
+    alignItems: 'center'
   },
   headerView: {
-    flex: 1,
-    // justifyContent: 'center',
-    // padding: 10
-    // fontSize:
+    flex: 1
   },
   loginForm: {
     flex: 2,
@@ -51,8 +46,12 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   header: {
-    position: 'absolute',
-    top: -70
+    position: 'relative',
+    top: -70,
+    flex: 1
+  },
+  body: {
+    flex: 4
   }
 });
 
