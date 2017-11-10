@@ -1,0 +1,27 @@
+{
+  "name": "billfold-ballot",
+  "version": "1.0.0",
+  "description": "Cast your ballot with your billfold with this barcode-scanning mobile app",
+  "main": "index.js",
+  "scripts": {
+    "build-client-watch": "webpack -w",
+    "test": "test",
+    "start-dev": "npm run build-client-watch & npm run start-server",
+    "start-server": "NODE_ENV='development' nodemon server -e html,js,scss --ignore public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfsilva713/Billfold-Ballot.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bfsilva713/Billfold-Ballot/issues"
+  },
+  "homepage": "https://github.com/bfsilva713/Billfold-Ballot#readme",
+  "dependencies": {
+    "create-react-native-app": "^1.0.0",
+    "quagga": "^0.12.1",
+    "webrtc-adapter": "^6.0.0"
+  }
+}
