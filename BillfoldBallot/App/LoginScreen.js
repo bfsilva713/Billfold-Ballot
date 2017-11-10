@@ -27,7 +27,11 @@ const LoginScreen = ({ navigation }) => (
           Signup
       </Button>
       </View>
-      <Footer />
+      <View style={styles.loginFooter}>
+        <Image
+          style={{width: 150, height: 50}}
+          source={{uri: 'https://s3.amazonaws.com/assets2.opensecrets.org/img/opensecrets_150x54.gif'}} />
+      </View>
     </View>
   </View>
 )

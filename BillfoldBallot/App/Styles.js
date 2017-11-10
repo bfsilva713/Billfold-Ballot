@@ -33,17 +33,13 @@ const styles = StyleSheet.create({
   },
   footer: {
     flex: 1,
-    width: 310,
-    height: 200,
-    paddingTop: 120,
+    width: 310
+  },
+  loginFooter: {
+    flex: 1,
     paddingRight: 10,
     position: 'absolute',
-    bottom: 40
-
-  },
-  footerText: {
-    fontSize: 12,
-    paddingTop: 10,
+    bottom: 50
   },
   header: {
     position: 'relative',
@@ -51,7 +47,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   body: {
-    flex: 4
+    flex: 5
   }
 });
 
