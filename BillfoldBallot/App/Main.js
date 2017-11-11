@@ -14,12 +14,11 @@ const Main = () => (
       <Scanner />
       <Text>Or, search a company by name:</Text>
       <TextInput style={styles.formInput} />
-      <Button title='Search' />
+      <Button title='Search' onPress={()=>{}}/>
     </View>
     <Footer />
   </ScrollView>
 )
-
 
 
 export default Main

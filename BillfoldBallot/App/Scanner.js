@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
-// import sha1 from 'sha1'
+import { connect } from 'react-redux'
 import { View, StyleSheet, AlertIOS } from 'react-native'
 import Camera from 'react-native-camera'
+import sha1 from 'crypto-js/hmac-sha1'
+import Base64 from 'crypto-js/enc-base64'
+import getCompany from './Store'
+
+
 
 
 class Scanner extends Component {
@@ -15,11 +20,15 @@ class Scanner extends Component {
 
 
   _onBarCodeRead(event) {
-    this.setState({showCamera: false});
-    AlertIOS.alert(
-        "Barcode Found!",
-        "Type: " + event.type + "\nData: " + event.data
-    );
+    this.setState({ showCamera: false });
+    getCompany(event.data)
+      .then(array => {
+        AlertIOS.alert(
+          "Barcode Found!",
+          "Type: " + event.type + "\nData: " + array
+        )
+      }
+      )
   }
 
   render() {

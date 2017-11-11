@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		TmWN4pPMm//hyep0Davwv94TlaQ=
+		yJVaKt60XzpBhF/2pZx+8hjbtjQ=
 		</data>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
 		<data>
@@ -51,7 +51,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uZbFM6+zom4VoWOaXFf/ip4GZQY=
+		8uS10V/GksSCpAQEGnSfCuPbklU=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -63,11 +63,11 @@
 		</data>
 		<key>PlugIns/BillfoldBallotTests.xctest.dSYM/Contents/Resources/DWARF/BillfoldBallotTests</key>
 		<data>
-		LdC0D72HK80aUvDQp6Rraj8BXng=
+		R8Yby9XsMBpbx+B4lfWWkqyOFW0=
 		</data>
 		<key>PlugIns/BillfoldBallotTests.xctest/BillfoldBallotTests</key>
 		<data>
-		psMJAIZQt+gKy59bQMv/iWqTpRk=
+		FnoQ4WJRvYrpP1hgUAORzLBVqkY=
 		</data>
 		<key>PlugIns/BillfoldBallotTests.xctest/Info.plist</key>
 		<data>
@@ -84,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TmWN4pPMm//hyep0Davwv94TlaQ=
+			yJVaKt60XzpBhF/2pZx+8hjbtjQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			o21+8eCSbbjG09qDJ8MSe17d6+6AoX79gTG8DWIMJG8=
+			H9LFHzPmPuWc274fvHOZIYY1fBeriEavTLjlsuwdsq8=
 			</data>
 		</dict>
 		<key>Frameworks/IDEBundleInjection.framework/IDEBundleInjection</key>
@@ -207,22 +207,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LdC0D72HK80aUvDQp6Rraj8BXng=
+			R8Yby9XsMBpbx+B4lfWWkqyOFW0=
 			</data>
 			<key>hash2</key>
 			<data>
-			/dZnSxl1pNAQcc1wZOj9qqBtfELzMyJ88xmVGSy0+Rs=
+			rNPxvTn/LBuv2Ly1GeAFgt1LeAB/3hU9HtNTVBKOgQU=
 			</data>
 		</dict>
 		<key>PlugIns/BillfoldBallotTests.xctest/BillfoldBallotTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			psMJAIZQt+gKy59bQMv/iWqTpRk=
+			FnoQ4WJRvYrpP1hgUAORzLBVqkY=
 			</data>
 			<key>hash2</key>
 			<data>
-			lSWW/x6wx+LWtMtU0jndKoSWC+7r8F28LvIaajgQ5nU=
+			PCtub4pxWhmmaNCqybRGob47hrJiN/QFkkgrsJ34d6Y=
 			</data>
 		</dict>
 		<key>PlugIns/BillfoldBallotTests.xctest/Info.plist</key>
