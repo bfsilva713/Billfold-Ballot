@@ -4,37 +4,15 @@ import { View, StyleSheet, AlertIOS } from 'react-native'
 import Camera from 'react-native-camera'
 import sha1 from 'crypto-js/hmac-sha1'
 import Base64 from 'crypto-js/enc-base64'
-import getCompany from './Store'
+import { fetchProductCompany, hideCamera, ProductNotFound } from './Store'
 
 
+export function Scanner(props) {
+  console.log('PROPS ARE', props)
 
-
-class Scanner extends Component {
-  constructor() {
-    super()
-    this._onBarCodeRead = this._onBarCodeRead.bind(this)
-    this.state = {
-      showCamera: true
-    }
-  }
-
-
-  _onBarCodeRead(event) {
-    this.setState({ showCamera: false });
-    getCompany(event.data)
-      .then(array => {
-        AlertIOS.alert(
-          "Barcode Found!",
-          "Type: " + event.type + "\nData: " + array
-        )
-      }
-      )
-  }
-
-  render() {
     return (
       <View style={styles.container}>
-        {this.state.showCamera &&
+        {props.showCamera &&
           (
             <Camera
               ref={(cam) => {
@@ -42,14 +20,14 @@ class Scanner extends Component {
               }}
               style={styles.preview}
               aspect={Camera.constants.Aspect.stretch}
-              onBarCodeRead={this._onBarCodeRead}
+              onBarCodeRead={props.onBarCodeRead}
             />
           )
         }
       </View>
     );
   }
-}
+
 
 const styles = StyleSheet.create({
   container: {
@@ -73,4 +51,44 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Scanner
+const mapState = state => {
+  return {
+    showCamera: state.showCamera,
+
+  }
+}
+
+const mapDispatch = dispatch => {
+  return {
+  //   getCompany(upc){
+  //     dispatch(getCompany(upc))
+  //   },
+    onBarCodeRead(event) {
+      console.log('BARCODE READ')
+      try{
+        dispatch(fetchProductCompany(event.data))
+        dispatch(hideCamera())
+      } catch(error) {
+        console.error(error)
+          AlertIOS.alert('That product wasn\'t found in the database.')
+      }
+
+    }
+  }
+}
+
+// _onBarCodeRead(event) {
+//   this.setState({ showCamera: false });
+//   getCompany(event.data)
+//     .then(array => {
+//       AlertIOS.alert(
+//         "Barcode Found!",
+//         "Type: " + event.type + "\nData: " + array
+//       )
+//     }
+//     )
+// }
+const ScannerContainer = connect(mapState, mapDispatch)(Scanner)
+
+export default ScannerContainer
+

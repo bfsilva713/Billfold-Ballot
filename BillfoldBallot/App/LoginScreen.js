@@ -1,9 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-native'
 import { View, Image, Button, TextInput, Text } from 'react-native'
+import { StackNavigator } from 'react-navigation'
 import styles from './Styles'
 import Footer from './Footer'
+import MainScreen from './MainScreen'
 
-const LoginScreen = ({ navigation }) => (
+
+const LoginScreen = () => (
   <View style={styles.container}>
     <View style={styles.headerView}>
       <Image source={require('../Logo.png')} />
@@ -14,18 +18,8 @@ const LoginScreen = ({ navigation }) => (
       <Text style={styles.formText}> Password </Text>
       <TextInput style={styles.formInput} />
       <View style={styles.loginButton}>
-        <Button
-          onPress={() => navigation.navigate('Main')}
-          title='Log in'
-        >
-          Login
-      </Button>
-        <Button
-          onPress={() => navigation.navigate('Main')}
-          title='Sign up'
-        >
-          Signup
-      </Button>
+        <Link to='/main'><Text>Login</Text></Link>
+        <Link to='/main'><Text>Signup</Text></Link>
       </View>
       <View style={styles.loginFooter}>
         <Image
@@ -35,5 +29,14 @@ const LoginScreen = ({ navigation }) => (
     </View>
   </View>
 )
+
+// const nav = StackNavigator({
+//   Login: {
+//     screen: LoginScreen
+//   },
+//   Main: {
+//     screen: Main
+//   }
+// })
 
 export default LoginScreen

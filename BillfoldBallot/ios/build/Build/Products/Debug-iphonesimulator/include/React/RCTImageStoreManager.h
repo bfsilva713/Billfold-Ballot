@@ -11,10 +11,14 @@
  * Set and get cached image data asynchronously. It is safe to call these from any
  * thread. The callbacks will be called on an unspecified thread.
  */
-- (void)removeImageForTag:(NSString *)imageTag withBlock:(void (^)(void))block;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
+
+- (void)removeImageForTag:(NSString *)imageTag withBlock:(void (^)())block;
 - (void)storeImageData:(NSData *)imageData withBlock:(void (^)(NSString *imageTag))block;
 - (void)getImageDataForTag:(NSString *)imageTag withBlock:(void (^)(NSData *imageData))block;
 
+#pragma clang diagnostic pop
 /**
  * Convenience method to store an image directly (image is converted to data
  * internally, so any metadata such as scale or orientation will be lost).
